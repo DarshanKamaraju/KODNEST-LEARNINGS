@@ -1,0 +1,63 @@
+Age Categorizer
+
+Question Description: Create a program that categorizes people based on their age: Child (0-12), Teen (13-19), Adult (20-59), Senior (60+). The program should accept an integer 'age' as input.
+
+Boiler Plate Code:
+
+public class Main
+
+{
+
+public static void categorizeAge(int age)
+
+{
+
+// your code here
+
+}
+
+public static void main(String[] args)
+
+{
+
+}
+
+}
+
+Sample Input: 25
+
+Sample Output: Adult
++++++++++++++++++++++++++
+public class Main {
+	public static void categorizeAge(int age)
+	{
+		if(age>0 && age<=12)
+		{
+			System.out.println("Child");
+		}
+		else if(age<19 && age>13)
+		{
+			System.out.println("Teen");
+		}
+		else if(age<59 && age>20)
+		{
+			System.out.println("Adult");
+		}
+		else
+		{
+			System.out.println("Senior");
+		}
+	}
+	public static void main(String[] args)
+	{
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Enter your age");
+		int age=scan.nextInt();
+		categorizeAge(age);
+		scan.close();
+	}
+}
++++++++++++++++
+Enter your age
+25
+Adult
